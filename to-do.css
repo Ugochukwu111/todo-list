@@ -1,0 +1,130 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100svh;
+  background-color: #d0dff6 ;
+  font-family: "Inter Tight", serif;
+  font-optical-sizing: auto;
+}
+
+button{
+  padding: .6em 1.4em;
+  border-radius: 2rem;
+  border: none;
+  font-weight: 700;
+  background-color: rgb(57, 133, 241);
+  color: whitesmoke;
+  transition: all 300ms ease;
+}
+
+h4{
+  color: #8eaee1e2;
+}
+
+button:active{
+  opacity: .7;
+
+}
+
+
+
+.container{
+  height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.container >*{
+  background-color: rgba(165, 197, 240, 0.464);
+  width: 100%;
+  padding: 1em;
+  align-items: center;
+}
+
+.first-column-container{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+}
+
+.input-todolist-div{
+  width: 100%;
+  height: fit-content;
+  max-width: 450px;
+  display: flex;
+  padding: .5em;
+  margin: 1em;
+  flex-direction: column;
+  
+}
+
+.input-div{
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 0;
+  flex-wrap: wrap;
+}
+.input-div >*{
+  margin: .2em 0;
+}
+
+/* input todo input element */
+.inside-text{
+  height: 2rem;
+  padding: 0 1.5em;
+  border-radius: 2rem;
+  font-weight: 700;
+  border: 1px solid rgba(128, 128, 128, 0.475);
+}
+
+.todo-grid{
+  background-color: #e5ecf7;
+  border-radius: 1rem;
+  padding: 1em;
+  /* display: flex; */
+  align-items: center;
+  height: fit-content;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* undo todo text */
+.undo-todo{
+  font-weight: 700;
+  color: rgb(17, 42, 91);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+ .delete-btn{
+  background-color: transparent;
+ }
+
+/* date input */
+.js-due-date-input{
+  width:  8rem;
+  background-color: rgba(248, 243, 243, 0.7);
+  font-weight: 700;
+  padding: 0 .5em;
+  border: 1px solid rgba(128, 128, 128, 0.475);
+ 
+}
+
+@media(max-width:40rem){
+  .first-column-container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+  }
+  .first-column-container >*{
+    width: 100%;
+  }
+  .todo-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

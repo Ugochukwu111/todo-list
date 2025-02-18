@@ -3,18 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="to-do.css">
     <link rel="stylesheet" href="to-do.css">
     <title>Document</title>
 </head>
 <body>
-<p>Todo List </p>
-<input class="inside-text" type="text" placeholder="Todo name">
+    <div class="container">
+        <!-- column divs -->
+        <div class="first-column-container">
+            <!-- this div is where you add your todo -->
+            <div class="input-todolist-div">
+                
+                <h2>Todo List </h2>
+                <div class="input-div">
+                <input class="inside-text" type="text" placeholder="Todo name">
+                <input type="date" class="js-due-date-input">
+                
+                <button onclick="addTodo()">Add</button>
+            </div>
+           </div>
+          
+           <!-- in this div the added todo are displayed -->
+           <div class="list-box todo-grid">
+            <h4>
+                NO TODO ADDED YET
+            </h4>
+           </div>
+        </div>
 
-<button onclick="addTodo()">Add</button>
+        <!-- in this div the completed todo are displayed -->
+        <!-- <div>
 
-<div class="list-box">
+             furture modification -->
+          <!-- <h3>Completed task</h3> -->
+<!--          
+        </div>  -->
+    </div>
 
-</div>
+
+
     
 
     <script src="to-do.js"></script>
