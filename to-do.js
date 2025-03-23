@@ -1,6 +1,6 @@
 let inputElement = document.querySelector('.inside-text');
 const dateEl = document.querySelector('.js-due-date-input');
-
+let todoDefaultText = document.querySelector('.defalt-added-todo-text');
 let listBox = document.querySelector('.list-box');
 
  //this is the todoname that th user inputs
@@ -18,6 +18,7 @@ const todoList = [
 ];
 
 // renderTodolist()
+
 
 
 function renderTodolist() {
@@ -67,3 +68,9 @@ function addTodo() {
    renderTodolist()
 }
 
+setInterval(()=>{
+  if (todoList.length === 0){
+    let defaultState = document.querySelector('.list-box')
+    defaultState.innerHTML = '<h4> NO TODO ADDED YET </h4>'
+  }
+}, 2000)
